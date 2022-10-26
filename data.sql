@@ -4,3 +4,10 @@ INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALU
 INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Gabumon',TRUE,2,'2018-12-15',8);
 INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Pikachu',FALSE,1,'2021-01-7',15.08);
 INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Devimon',TRUE,5,'2017-05-12'11);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Charmander',FALSE,0,'2020-02-08',-11);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Plantmon',TRUE,2,'2021-12-15',-5.7);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Squirtle',FALSE,3,'1993-04-02',-12.13);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Angemon',TRUE,1,'2005-06-12',-45);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Boarmon',TRUE,7,'2005-06-07',20.4);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Blossom',TRUE,3,'1998-10-13',17);
+INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Ditto',TRUE,4,'2022-05-14',22);
