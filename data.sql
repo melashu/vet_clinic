@@ -11,3 +11,14 @@ INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALU
 INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Boarmon',TRUE,7,'2005-06-07',20.4);
 INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Blossom',TRUE,3,'1998-10-13',17);
 INSERT INTO animals (name,neutered,escape_attempts,date_of_birth,weight_kg) VALUES ('Ditto',TRUE,4,'2022-05-14',22);
+
+INSERT INTO owners (full_name,age) VALUES ('Sam Smith',34),('Jennifer Orwell',19),('Bob',45),('Melody Pond',77),('Dean Winchester',14),('Jodie Whittake',38);
+
+UPDATE animals SET owner_id=1 where name='Agumon';
+UPDATE animals SET owner_id=2 where name IN ('Gabumon','Pikachu');
+UPDATE animals SET owner_id=3 where name IN ('Devimon','Plantmon');
+UPDATE animals SET owner_id=4 where name IN ('Charmander','Squirtle','Blossom');
+UPDATE animals SET owner_id=5 where name IN ('Angemon','Boarmon');
+
+UPDATE animals SET species_id=2 where name LIKE '%mon';
+UPDATE animals SET species_id=1 where name NOT LIKE '%mon';
