@@ -47,3 +47,17 @@ SELECT count(a.id),s.name from animals a JOIN species s ON a.species_id=s.id GRO
 SELECT a.name, s.name, o.full_name from animals a JOIN owners o ON a.owner_id=o.id JOIN species s ON a.species_id=s.id where s.name='Digimon' and o.full_name='Jennifer Orwell';
 select a.name,o.full_name from animals a LEFT JOIN owners o ON a.owner_id=o.id where a.escape_attempts=0 and o.id=5;
 SELECT count(a.owner_id) as most_owned,o.full_name from owners o LEFT JOIN animals a ON a.owner_id=o.id GROUP BY (o.id);
+
+
+SELECT a.name,v.name,vi.visist_date from animals a,vets v,visits vi where vi.animals_id=a.id and vi.vets_id=v.id and v.id=1;
+SELECT count(a.name),a.name,v.name as vet_name from animals a,vets v,visits vi where vi.animals_id=a.id and vi.vets_id=v.id and v.id=3 GROUP BY a.name,v.name;
+SELECT v.name, s.name from species s full join specializations spe on spe.species_id = s.id FULL JOIN vets v on v.id = spe.vets_id;
+SELECT a.name, a.date_of_birth,v.name,vi.visist_date from animals a,vets v, visits vi where vi.animals_id=a.id and vi.vets_id=v.id and v.id=3 and visist_date BETWEEN '2020-04-01' and '2020-08-30';
+SELECT count(a.name) as Number_of_visist, a.name as animal_name from animals a JOIN visits v ON v.animals_id=a.id GROUP BY a.name;
+SELECT a.name,v.name,vi.visist_date from animals a,vets v, visits vi where vi.animals_id=a.id and vi.vets_id=v.id and v.id=2 ORDER BY vi.visist_date LIMIT 1;
+SELECT a.name as animal_name,v.name as vet_name,v.age, vi.visist_date from animals a,vets v, visits vi where vi.animals_id=a.id and vi.vets_id=v.id ORDER BY vi.visist_date DESC;
+SELECT COUNT(v.name), v.name FROM visits vi RIGHT JOIN vets v ON v.id = vi.vets_id JOIN animals a ON a.id = vi.animals_id JOIN specializations sp ON sp.vets_id = v.id WHERE sp.species_id != a.species_id GROUP BY v.name;
+SELECT V.name as vet_name, A.name as animals_name, s.name as species_name from visits vi join animals a on a.id = vi.animals_id join vets v on v.id = vi.vets_id join species S on S.id = A.species_id where V.id = 2 GROUP by s.name, v.name, a.name;
+
+
+
